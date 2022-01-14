@@ -1,9 +1,30 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-  <title></title>
+  <title>Currency Exchange</title>
 </head>
 <body>
-  
+  <div class="container">
+    <h1>Currency Exchanger</h1>
+    <form>
+      <div class="mb-3">
+        <label for="amountToExchange" class="form-label">Amount to exchange:</label>
+        <input id="amountToExchange" class="form-control" type="number">
+      </div>
+      <div class="mb=3">
+        <select name="currencyToExchangeToo" id="currencyToExchangeToo" class="form-select">
+          <option selected>Choose Currency to convert too</option>
+          <option value="USD">United States Dollar</option>
+          <option value="AED">UAE Dirham</option>
+          <option value="AFN">Afghan Afghani</option>
+          <option value="ALL">Albanian Lek</option>
+          <option value="AMD">Armenian Dram</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-success" id="convertButton">Convert</button>
+    </form>
+    <div id="conversionResults"></div>
+    <div id="errors"></div>
+  </div>
 </body>
 </html>
