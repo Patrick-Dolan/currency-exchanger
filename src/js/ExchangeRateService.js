@@ -11,4 +11,7 @@ export default class ExchangeRateService {
         return Error(error);
       });
   }
+  static convertCurrency(amountToExchange, currencyExchangeRate) {
+    return convertedRate = "$" + (amountToExchange / currencyExchangeRate).toFixed(2);
+  }
 }
