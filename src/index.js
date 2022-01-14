@@ -12,7 +12,7 @@ function clearFields() {
 }
 
 function displayConversionResults(amountToExchange, convertedAmount) {
-  $("#conversionResults").text(`${amountToExchange} is equal to ${convertedAmount}`);
+  $("#conversionResults").text(`$${amountToExchange} is equal to $${convertedAmount}`);
 }
 
 function displayErrors(error) {
@@ -22,7 +22,7 @@ function displayErrors(error) {
 $(document).ready(() => {
   $("#convertButton").click((event) => {
     event.preventDefault();
-    let amountToExchange = parseInt($("#amountToExchange").val());
+    let amountToExchange = parseFloat(parseFloat($("#amountToExchange").val()).toFixed(2));
     let currencyToExchangeTo = $("#currencyToExchangeTo").val();
     let convertedAmount = 0;
     clearFields();
