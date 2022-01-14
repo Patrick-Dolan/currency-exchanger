@@ -7,8 +7,8 @@ import ExchangeRateService from "./js/ExchangeRateService";
 function clearFields() {
   $("#amountToExchange").val("");
   $("#currencyToExchangeTo").val("");
-  $("#conversionResults").val("");
-  $("#errors").val("");
+  $("#conversionResults").text("");
+  $("#errors").text("");
 }
 
 function displayConversionResults(amountToExchange, convertedAmount) {
@@ -24,6 +24,7 @@ $(document).ready(() => {
     event.preventDefault();
     let amountToExchange = parseInt($("#amountToExchange").val());
     let currencyToExchangeTo = $("#currencyToExchangeTo").val();
+    let convertedAmount = 0;
     clearFields();
     ExchangeRateService.getRates()
       .then((exchangeRateResponse) => {
@@ -31,8 +32,12 @@ $(document).ready(() => {
           throw Error(`ExchangeRate API error: ${exchangeRateResponse.message}`);
         }
         let currencyExchangeRate = ExchangeRateService.getRateFromResponse(exchangeRateResponse, currencyToExchangeTo);
-        let convertedAmount = ExchangeRateService.convertCurrency(amountToExchange, currencyExchangeRate);
-        displayConversionResults(amountToExchange, convertedAmount);
+        if (typeof currencyExchangeRate === "string") {
+          displayErrors(currencyExchangeRate);
+        } else {
+          convertedAmount = ExchangeRateService.convertCurrency(amountToExchange, currencyExchangeRate);
+          displayConversionResults(amountToExchange, convertedAmount);
+        }
       })
       .catch((error) => {
         displayErrors(error.message);
