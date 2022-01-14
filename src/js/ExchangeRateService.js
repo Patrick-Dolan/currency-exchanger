@@ -16,6 +16,7 @@ export default class ExchangeRateService {
   }
   static getRateFromResponse(response, currencyToExchangeTo) {
     let currencies = Object.keys(response.conversion_rates);
+    if (!currencies.includes(currencyToExchangeTo)) return "Error currency doesnt exist.";
     for (let i = 0; i < currencies.length; i++) {
       if (currencies[i] === currencyToExchangeTo) {
         return response.conversion_rates[currencies[i]];
