@@ -30,6 +30,7 @@ $(document).ready(() => {
         if (exchangeRateResponse instanceof Error) {
           throw Error(`ExchangeRate API error: ${exchangeRateResponse.message}`);
         }
+        let currencyExchangeRate = ExchangeRateService.getRateFromResponse(exchangeRateResponse, currencyToExchangeTo);
         let convertedAmount = ExchangeRateService.convertCurrency(amountToExchange, currencyExchangeRate);
         displayConversionResults(amountToExchange, convertedAmount);
       })
