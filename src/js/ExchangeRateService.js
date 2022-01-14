@@ -12,7 +12,7 @@ export default class ExchangeRateService {
       });
   }
   static convertCurrency(amountToExchange, currencyExchangeRate) {
-    return "$" + (amountToExchange / currencyExchangeRate).toFixed(2);
+    return (amountToExchange / currencyExchangeRate).toFixed(2);
   }
   static getRateFromResponse(response, currencyToExchangeTo) {
     let currencies = Object.keys(response.conversion_rates);
