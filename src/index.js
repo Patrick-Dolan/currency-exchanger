@@ -22,7 +22,7 @@ function displayErrors(error) {
 $(document).ready(() => {
   $("#convertButton").click((event) => {
     event.preventDefault();
-    let amountToExchange = $("#amountToExchange").val();
+    let amountToExchange = parseInt($("#amountToExchange").val());
     let currencyToExchangeTo = $("#currencyToExchangeTo").val();
     clearFields();
     ExchangeRateService.getRates()
