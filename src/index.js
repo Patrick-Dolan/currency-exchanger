@@ -11,8 +11,8 @@ function clearFields() {
   $("#errors").text("");
 }
 
-function displayConversionResults(amountToExchange, convertedAmount) {
-  $("#conversionResults").text(`$${amountToExchange} is equal to $${convertedAmount}`);
+function displayConversionResults(amountToExchange, convertedAmount, currencyToExchangeTo) {
+  $("#conversionResults").text(`$${amountToExchange} in USD is equal to $${convertedAmount} in ${currencyToExchangeTo}`);
 }
 
 function displayErrors(error) {
@@ -36,7 +36,7 @@ $(document).ready(() => {
           displayErrors(currencyExchangeRate);
         } else {
           convertedAmount = ExchangeRateService.convertCurrency(amountToExchange, currencyExchangeRate);
-          displayConversionResults(amountToExchange, convertedAmount);
+          displayConversionResults(amountToExchange, convertedAmount, currencyToExchangeTo);
         }
       })
       .catch((error) => {
