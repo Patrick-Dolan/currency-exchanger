@@ -56,7 +56,7 @@ After you have your API key you will need to create a .env file in the root dire
 open the .env file and and type in the follow replacing "YOUR_KEY_HERE" with your API key.<br>
 <code>API_KEY=YOUR_KEY_HERE</code>  
 
-Next you will need to open the project in you terminal of choice and in the root directory run the following command:  
+Next you will need to open the project in your terminal of choice and in the root directory run the following command:  
 <code>npm run install</code>  
 
 MAC USERS, you will need to change one line of code in the package.json folder to the following in order to start the program:  
