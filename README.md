@@ -6,7 +6,6 @@
 
 ## Github Pages Link
 
-NOT YET DEPLOYED
 [Currency Exchanger Github Pages](https://patrick-dolan.github.io/currency-exchanger/)
 
 ## Technologies Used
