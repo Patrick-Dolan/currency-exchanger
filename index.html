@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <title>Currency Exchange</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Currency Exchanger</h1>
+    <form>
+      <div class="mb-3">
+        <label for="amountToExchange" class="form-label">Amount to exchange:</label>
+        <input id="amountToExchange" class="form-control" type="number">
+      </div>
+      <div class="mb=3">
+        <label for="currencyToExchangeTo" class="form-label">Choose currency to convert to:</label>
+        <select name="currencyToExchangeTo" id="currencyToExchangeTo" class="form-select">
+          <option value="USD">United States Dollar</option>
+          <option value="AED">UAE Dirham</option>
+          <option value="AFN">Afghan Afghani</option>
+          <option value="ALL">Albanian Lek</option>
+          <option value="AMD">Armenian Dram</option>
+          <option value="ANG">Netherlands Antilles</option>
+          <option value="AOA">Angolan Kwanza</option>
+          <option value="ARS">Argentine Peso</option>
+          <option value="AUD">Australian Dollar</option>
+          <option value="AWG">Aruban Florin</option>
+          <option value="AZN">Azerbaijani Manat</option>
+          <option value="BAM">Bosnia and Herzegovina Mark</option>
+          <option value="BBD">Barbados Dollar</option>
+          <option value="BDT">Bangladeshi Taka</option>
+          <option value="BGN">Bulgarian Lev</option>
+          <option value="BHD">Bahraini Dinar</option>
+          <option value="BIF">Burundian Franc</option>
+          <option value="BMD">Bermudian Dollar</option>
+          <option value="BND">Brunei Dollar</option>
+          <option value="BOB">Bolivian Boliviano</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-success" id="convertButton">Convert</button>
+    </form>
+    <div id="conversionResults"></div>
+    <div id="errors"></div>
+  </div>
+<script type="text/javascript" src="bundle.js"></script></body>
+</html>
