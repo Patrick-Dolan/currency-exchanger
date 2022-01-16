@@ -46,6 +46,8 @@ The dashboard will have you api key right in the middle of the screen as below:
 
 ![Image of where to find you api key](/README-imgs/step3.PNG)
 
+<strong>THE API KEY ABOVE WAS MADE USING AN EXAMPLE ACCOUNT AND WONT WORK FOR YOUR PROGRAM!</strong>
+
 This is also where you will find the API documentation and other such useful resources if you're interested.
 
 </details>
